@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css'; // Sẽ tạo ở bước 4
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import SearchForm from './components/SearchForm';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <SearchForm />
-    </div>
+    <GoogleReCaptchaProvider reCaptchaKey="6LfvEawrAAAAAHnO--MtAuiErMDAsHMTxCyzlc8c">
+      <div className="App">
+        <main>
+          <SearchForm />
+        </main>
+      </div>
+    </GoogleReCaptchaProvider>
   );
 }
 
