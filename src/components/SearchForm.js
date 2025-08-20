@@ -107,31 +107,33 @@ const SearchForm = () => {
             </form>
             
             {ketQua && (
-                <div className={`result ${ketQua.trangThai}`}>
-                    <div className="result-header">
-                        <div className={`status-indicator ${ketQua.trangThai}`}></div>
-                        <p className="result-message">{ketQua.thongDiep}</p>
-                    </div>
-                    
-                    {sinhVienTimThay && (
-                        <div className="ticket-info">
-                            <h4>Thông tin vé:</h4>
-                            <div className="info-grid">
-                                <div className="info-item">
-                                    <span className="info-label">Họ và tên:</span>
-                                    <span className="info-value">{sinhVienTimThay.hoTen}</span>
-                                </div>
-                                <div className="info-item">
-                                    <span className="info-label">Lớp:</span>
-                                    <span className="info-value">{sinhVienTimThay.lopDB}</span>
-                                </div>
-                                <div className="info-item">
-                                    <span className="info-label">Đi ca:</span>
-                                    <span className="info-value">{sinhVienTimThay.diCa}</span>
+                <div className="results-container">
+                    <div className={`result ${ketQua.trangThai}`}>
+                        <div className="result-header">
+                            <div className={`status-indicator ${ketQua.trangThai}`}></div>
+                            <p className="result-message">{ketQua.thongDiep}</p>
+                        </div>
+                        
+                        {sinhVienTimThay && (
+                            <div className="ticket-info">
+                                <h4>Thông tin vé:</h4>
+                                <div className="info-grid">
+                                    <div className="info-item">
+                                        <span className="info-label">Họ và tên:</span>
+                                        <span className="info-value">{sinhVienTimThay.hoTen}</span>
+                                    </div>
+                                    <div className="info-item">
+                                        <span className="info-label">Lớp:</span>
+                                        <span className="info-value">{sinhVienTimThay.lopDB}</span>
+                                    </div>
+                                    <div className="info-item">
+                                        <span className="info-label">Đi ca:</span>
+                                        <span className="info-value">{sinhVienTimThay.diCa}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
             )}
         </div>
